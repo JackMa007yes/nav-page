@@ -36,19 +36,29 @@
     
     .globalHeader {
         /* border: 1px solid red; */
-        margin: 70px 20px 0px 20px;
+        margin: 0 20px 0px 20px;
         padding: 0 auto;
     }
     
+    .time {
+        font-weight: 200;
+        line-height: 56px;
+        font-size: 56px;
+        color: white;
+        margin: 40px auto 20px auto;
+        text-align: center;
+    }
+    
     .searchForm {
-        display: flex;
+        position: relative;
+        /* margin: 0 20px 22px 20px; */
         justify-content: space-between;
     }
     
     @media(min-width:500px) {
         .globalHeader {
             /* border: 1px solid red; */
-            margin: 100px 20px 60px 20px;
+            margin: 120px 20px 100px 20px;
             padding: 0 auto;
         }
         .searchForm {
@@ -65,23 +75,45 @@
     }
     
     .searchForm>input {
+        /* text-align: center; */
         width: 100%;
+        outline: none;
         height: 40px;
+        text-indent: 10px;
         border: 1px solid #dddddd;
-        padding: 0 10px;
-        border-radius: 4px;
+        border-radius: 20px;
     }
     
     .searchForm>button {
-        width: 80px;
-        margin-left: 8px;
-        white-space: nowrap;
-        background-color: #398DEE;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 60px;
+        height: 80%;
+        background-color: white;
         border: none;
-        padding: 0 10px;
         color: white;
-        border-radius: 4px;
-        font-size: 16px;
+        border-radius: 20px;
+    }
+    
+    @media(min-width:500px) {
+        .searchForm {
+            width: 180px;
+            margin-top: 50px;
+            transition: all 0.8s;
+        }
+        .searchForm:hover {
+            width: 450px;
+        }
+        .searchForm:focus-within {
+            width: 450px;
+        }
+    }
+    
+    .searchForm>button svg {
+        color: slategray;
+        width: 30px;
+        height: 30px;
     }
     
     .siteList {
@@ -132,7 +164,7 @@
         position: absolute;
         right: 4px;
         top: 2px;
-        color: grey;
+        color: rgb(196, 185, 185);
         width: 24px;
         height: 24px;
         cursor: default;
