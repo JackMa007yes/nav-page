@@ -76,10 +76,15 @@ $('.addButton')
     })
 
 window.onbeforeunload = () => {
-        const string = JSON.stringify(hashMap)
-        localStorage.setItem('x', string)
-    }
-    // 以下为键盘事件
+    const string = JSON.stringify(hashMap)
+    localStorage.setItem('x', string)
+}
+window.onpagehide = () => {
+    const string = JSON.stringify(hashMap)
+    localStorage.setItem('x', string)
+}
+
+// 以下为键盘事件
 $(document).on('keypress', (e) => {
     // e.key为按下的按键
     const { key } = e
